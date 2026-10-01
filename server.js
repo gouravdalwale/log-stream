@@ -2,20 +2,25 @@ const express= require("express");
 const { dirname } = require("node:path");
 const app=express();
 
+// Serve the frontend files from the same project directory
 app.use(express.static(__dirname));
 
+// Start the server on port 3000
 app.listen(3000,function (){
     console.log("SERVER IS RUNNING ON PORT 3000");
 });
 
+// SSE endpoint used to continuously send logs to connected clients
 app.get("/stream", function (req, res) {
 
     const clientId = req.query.clientId;
 
+    // Configure the response for Server-Sent Events
     res.setHeader("Content-Type", "text/event-stream");
     res.setHeader("Cache-Control", "no-cache");
     res.setHeader("Connection", "keep-alive");
 
+    // Generate and send a new log every 500 milliseconds
     const interval = setInterval(function () {
 
     const levels = ["INFO", "WARN", "ERROR"];
@@ -33,6 +38,7 @@ app.get("/stream", function (req, res) {
 
     }, 500);
 
+    // Stop generating logs when the client disconnects
     req.on("close", function () {
     clearInterval(interval);
     });
