@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    margin-bottom: 8px;
+}
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+main{
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+.control{
+    background-color: #18181b;
+    border: 1px solid #333;
+    padding: 24px;
+    border-radius: 10px;
+}
+.control h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 28px;
+}
+.control label{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+.control input{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    background-color: #0d1117;
+    color: white;
+    font-size: 15px;
+}
+.control button{
+    padding: 10px 16px;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+#start{
+    background-color: #238636;
+    color: white;
+}
+#stop{
+    background-color: #da3633;
+    color: white;
+}
+.status{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+#statusindicator{
+    width: 10px;
+    height: 10px;
+    background-color:  #da3633;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: inline-block;
+}
+.terminal{
+    margin-top: 24px;
+}
+#terminal{
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 16px;
+    min-height: 300px;
+    font-family: monospace;
+    overflow-y: auto;
+}
+.logline{
+    margin: 8px;
+    margin-bottom: 25px;
+    line-height: 1.5px;
+}
