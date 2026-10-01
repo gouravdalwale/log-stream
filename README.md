@@ -3,6 +3,11 @@
 A simple real-time log streaming dashboard made for the IRIS Web Team recruitment task.
 
 The backend generates logs and sends them to the frontend using Server-Sent Events (SSE).
+## Live Demo
+
+## Live Demo
+
+https://log-stream.onrender.com
 
 ## Features
 
