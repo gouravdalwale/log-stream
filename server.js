@@ -6,8 +6,10 @@ const app=express();
 app.use(express.static(__dirname));
 
 // Start the server on port 3000
-app.listen(3000,function (){
-    console.log("SERVER IS RUNNING ON PORT 3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", function () {
+    console.log(`SERVER IS RUNNING ON PORT ${PORT}`);
 });
 
 // SSE endpoint used to continuously send logs to connected clients
